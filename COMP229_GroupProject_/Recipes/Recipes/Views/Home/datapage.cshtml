@@ -1,0 +1,45 @@
+﻿@model RecipesListViewModel
+@{ 
+    Layout = "_Layout";
+    ViewBag.Title = "Recipes";
+}
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center " style="margin-top:0px;">
+            <div class="col-9 ">
+                <h3 class="text-center">View of a Recipes on Simple Recipes</h3>
+                <p align="center">Collection of Added Recipes.</p>
+                <table class="table table-hover" cellpadding="20">
+                    <thead>
+                        <tr>
+                            <th><strong>Recipe Name: </strong></th>
+                            <th><strong>First Ingredient: </strong></th>
+                            <th><br /><strong>Second Ingredient: </strong></th>
+                            <th><br /><strong>Third Ingredient: </strong></th>
+                            <th><br /><strong>Fourth Ingredient: </strong></th>
+                            <th><br /><strong>Fifth Ingredient: </strong></th>
+                            <th><strong>Instructions: </strong></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var r in Model.Recipes)
+                        {
+
+
+                            @Html.Partial("RecipeSummary", r)
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div page-model="@Model.PagingInfo" page-action="List" page-classes-enabled="true"
+         page-class="btn" page-class-normal="btn-dark"
+         page-class-selected="btn-primary"
+         class="btn-group pull-right m-1">
+    </div>
+    <hr />
+    <p class="signature">&copy;Zoe Pare - 300972366 - COMP229</p>
+</body>

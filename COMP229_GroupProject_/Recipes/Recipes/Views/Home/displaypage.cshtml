@@ -1,0 +1,79 @@
+﻿@model AddedRecipes 
+ 
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <table class="table table-bordered">
+
+                    <tr>
+                        <td>Recipe Id</td>
+                        <td>@Model.RecipeID</td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <td>@Math.Round(Model.Rating, 2) / 5</td>
+                    </tr>
+                    <tr>
+                        <td> Recipe Name</td>
+                        <td>@Model.recipename</td>
+                    </tr>
+                    <tr>
+                        <td>Ingredient 1</td>
+                        <td>@Model.ingredient1</td>
+                    </tr>
+                    <tr>
+                        <td>Ingredient 2</td>
+                        <td> @Model.ingredient2</td>
+                    </tr>
+                    <tr>
+                        <td>Ingredient 3</td>
+                        <td> @Model.ingredient3</td>
+                    </tr>
+                    <tr>
+                        <td>Ingredient 4</td>
+                        <td>@Model.ingredient4</td>
+                    </tr>
+                    <tr>
+                        <td>Ingredient 5</td>
+                        <td> @Model.ingredient5</td>
+                    </tr>
+                    <tr>
+                        <td>Instructions</td>
+                        <td> @Model.description</td>
+                    </tr>
+
+                </table>
+                <a asp-action="AddReview" asp-controller="Home" asp-route-id="@Model.RecipeID" class="button1">Add Review</a>
+                <table>
+                    <tr>
+                        <th>
+                            Reviews of @Model.recipename:
+                        </th>
+                    </tr>
+                    @if (Model.Reviews == null)
+                    {
+
+                    }
+                    else
+                    {
+                        @foreach (var r in Model.Reviews)
+                        {
+                            <tr>
+                                <td>
+                                    @Math.Round(r.Rating, 2) / 5
+                                </td>
+                                <td>
+                                    @r.addreview
+                                </td>
+
+                            </tr>
+                        }
+                    }
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</body>

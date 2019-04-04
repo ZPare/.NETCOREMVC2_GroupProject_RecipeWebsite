@@ -1,0 +1,33 @@
+﻿@model Recipes.Models.AddedRecipes
+
+
+<div class="recipeform">
+    <form align="center" asp-action="AddRecipe" asp-controller="Admin" method="post">
+        <label>
+            <strong>Recipe Name: </strong><br />
+            <input type="text" class="form-control" asp-for="recipename" /><br />
+
+            <strong>Ingredients: </strong><br />
+
+            <input type="text" class="form-control" asp-for="ingredient1" /><br />
+
+            <input type="text" class="form-control" asp-for="ingredient2" /><br />
+
+            <input type="text" class="form-control" asp-for="ingredient3" /><br />
+
+            <input type="text" class="form-control" asp-for="ingredient4" /><br />
+
+            <input type="text" class="form-control" asp-for="ingredient5" /><br />
+        </label>
+        <label asp-for="description">
+            <strong>Instructions:</strong><br />
+            <textarea asp-for="description" placeholder=" Add instructions here..."></textarea>
+        </label>
+        <div>
+            <button type="submit" class="button1">Save</button>
+
+            <a class="button1" asp-controller="Home" asp-action="Index">Cancel</a>
+        </div>
+    </form>
+</div>
+

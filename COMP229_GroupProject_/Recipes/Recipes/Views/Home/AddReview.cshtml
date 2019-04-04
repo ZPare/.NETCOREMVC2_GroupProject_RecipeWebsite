@@ -1,0 +1,26 @@
+﻿@model ReviewModel
+@{
+    Layout = "_Layout";
+}
+<body>
+    <div class="row">
+        <div class="col-12">
+            <form asp-action="AddReview" asp-controller="Home" method="post">
+                <div class="form-group">
+                    <label asp-for="@Model.Review.Rating" class="control-label"></label>
+                    <input asp-for="@Model.Review.Rating" class="form-control form-control-sm" />
+                    <small><span class="text-danger" asp-validation-for="@Model.Review.Rating"></span></small>
+                </div>
+
+
+                <label asp-for="@Model.Review.addreview" class="control-label"></label>
+                <textarea asp-for="@Model.Review.addreview" placeholder=" Add Review Here..."></textarea>
+                <small><span class="text-danger" asp-validation-for="@Model.Review.Rating"></span></small>
+
+                <input type="hidden" asp-for="@Model.RecipeID" />
+                <button type="submit" class="button1">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>

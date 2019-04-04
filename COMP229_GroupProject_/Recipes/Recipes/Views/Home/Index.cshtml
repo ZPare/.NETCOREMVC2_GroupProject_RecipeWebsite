@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+<!DocType html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Simple Recipes</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="~/css/imagestyles.css"/>
+</head>
+<body>
+    <h2>Welcome To My Recipe Website:</h2>
+    <h2>Simple Recipes</h2>
+
+    <ul>
+        <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+        <li><a asp-action="datapage" asp-controller="Home">Data Page</a></li>
+        @*<li><a asp-action="insertpage">Insert Page</a></li>*@
+        <li><a asp-action="Login" asp-controller="Account">User Page</a></li>
+    </ul>
+    <div>
+        <img src="~/images/VarietyVegetables.jpg" asp-append-version="true" />
+        <img src="~/images/vegetables.png" asp-append-version="true" />
+        <img src="~/images/Fruits.jpg" asp-append-version="true" />
+    </div>
+    <table style="width:60%" align="center">
+        <tr>
+            <th><h2>Our Goal</h2></th>
+            <th><h2>About Us</h2></th>
+        </tr>
+        <tr>
+            <td>
+                This website contains simple and easy recipes to follow. You will be able to navigate
+                throughout the webite to find exactly what you are looking for. There are recipes for
+                all levels of cooks. Whether you are looking for comfort foods or something fancy for
+                an up coming dinner, there is something for everyone!
+            </td>
+            <td>
+                We're a team working towards providing healthy recipes everyone can enjoy! 
+            </td>
+        </tr>
+    </table>
+    <img src="~/images/freshfood.jpg"
+         asp-append-version="true" />
+    <hr />
+    <p class="signature">&copy;Zoe Pare - 300972366 - COMP229</p>
+</body>
+</html>
+
+

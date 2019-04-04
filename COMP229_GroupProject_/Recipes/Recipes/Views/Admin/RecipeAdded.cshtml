@@ -1,0 +1,44 @@
+﻿@model AddedRecipes
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <h3>The Following Recipe Has Been Added.</h3>
+            <table class="table table-borderless table-striped">
+                <tr>
+                    <td><strong>Recipe Name: </strong></td>
+                    <td>@Model.recipename</td>
+                </tr>
+                <tr>
+                    <td><strong>First Ingredient: </strong></td>
+                    <td>@Model.ingredient1</td>
+                </tr>
+                <tr>
+                    <td><strong>Second Ingredient: </strong></td>
+                    <td> @Model.ingredient2</td>
+                </tr>
+                <tr>
+                    <td><strong>Third Ingredient: </strong></td>
+                    <td> @Model.ingredient3</td>
+                </tr>
+                <tr>
+                    <td><strong>Fourth Ingredient: </strong></td>
+                    <td>@Model.ingredient4</td>
+                </tr>
+                <tr>
+                    <td><strong>Fifth Ingredient: </strong></td>
+                    <td> @Model.ingredient5</td>
+                </tr>
+                <tr>
+                    <td><strong>Ingredients: </strong></td>
+                    <td> @Model.description</td>
+                </tr>
+
+            </table>
+            
+        </div>
+    </div>
+</div>
+@*<div>
+    <a asp-action="displaypage" asp-controller="Admin" class="button1">View Recipes</a>
+</div>*@

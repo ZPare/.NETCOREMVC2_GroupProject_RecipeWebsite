@@ -1,0 +1,14 @@
+﻿@model AddedRecipes
+<tr>
+    <td>@Model.recipename</td>
+    <td>@Model.ingredient1</td>
+    <td>@Model.ingredient2</td>
+    <td>@Model.ingredient3</td>
+    <td>@Model.ingredient4</td>
+    <td>@Model.ingredient5</td>
+    <td>@Model.description</td>
+    <td>
+        <br />
+        <a asp-action="displaypage" asp-controller="Home" class="button1" asp-route-id="@Model.RecipeID">View</a>
+    </td>
+</tr>
